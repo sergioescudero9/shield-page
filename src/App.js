@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
+import { ThemeProvider } from 'styled-components';
+import Router from './Router';
+import { theme } from './theme';
+import GlobalStyles from './globalStyles';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div>
+          <Suspense fallback={<h2>Loading</h2>}>
+            <GlobalStyles />
+            <Router />
+          </Suspense>
+        </div>
+      </ThemeProvider>
     );
   }
 }
