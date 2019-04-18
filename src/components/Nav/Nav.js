@@ -11,7 +11,6 @@ const LogoContainer = styled.li`
   ${({ theme: { sizes: { fonts: { little } }, colors: { neutral } } }) => (
     `
       font-size: ${little};
-      background: ${neutral};
     `
   )};
   &.fixed-nav{
@@ -35,7 +34,7 @@ const LogoLink = styled(Link)`
 `;
 
 const LinkStyle = styled(Link)`
-  color: ${({ theme: { colors: { neutral } } }) => neutral};
+  /* color: ${({ theme: { colors: { neutral } } }) => neutral}; */
   text-transform: uppercase;
   ${commonLink}
 `;
@@ -56,11 +55,10 @@ const ListContainer = styled.ul`
 `;
 
 const NavStyle = styled.nav`
-  background: black;
   top: 0;
   width: 100%;
   transition:all 0.5s;
-  position: relative;
+  position: fixed;
   z-index: 1;
 
   &.fixed-nav {

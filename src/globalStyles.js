@@ -8,26 +8,23 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${props => props.theme.sizes.fonts.main};
     font-weight: 200;
   }
+  a {
+    color: black
+  }
   body {
-    /* background-color: ${props => props.theme.colors.background}; */
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+    transition-property: color, background-color;
+    transition-duration: 0.6s;
     margin: 0;
-  }
-  /* @media (min-width: 680px) {
-    body{
-      
+    &.dark{
+      background-color: black;
+      color: white;
     }
-  } */
-  /* @media (min-width: 1224px) {
-    body{
-      font-size: 1.6em
+    &.dark a{
+      color: white;
     }
   }
-  @media (min-width: 1400px) {
-    body{
-      font-size: 1.8em
-    }
-  } */
-
   *, *:before, *:after {
     box-sizing: inherit;
   }

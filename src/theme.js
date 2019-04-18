@@ -9,6 +9,7 @@ export const theme = {
       main: '20px',
       little: '16px',
       big: '30px',
+      title: '72px'
     },
     spaces: {
       main: '20px'
