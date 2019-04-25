@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import TypeEffect from '../../components/TypeEffect';
 import Section from '../../components/Section';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Container = styled.section`
   display: flex;
@@ -39,7 +38,7 @@ function Home() {
         </Container>
       </Section>
       <Section>
-        Favorite Food: <FontAwesomeIcon icon="stroopwafel" />
+        Favorite Food
       </Section>
     </>
   );
