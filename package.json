@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.2.2",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@svgr/webpack": "4.1.0",

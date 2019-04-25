@@ -16,9 +16,11 @@ export const theme = {
     }
   },
   colors: {
-    main: 'black',
-    secondary: '#eeeeee',
-    neutral: 'white',
-    background: 'rgb(3, 3, 3)'
+    main: '#051200', //black
+    secondary:'#007AB3', // blue
+    neutral: '#FDFFFE', // white
+    background: '#051200',
+    third:'#F71C30', // red
+    fourth:'#678E3D', // green
   }
 };

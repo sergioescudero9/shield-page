@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import TypeEffect from '../../components/TypeEffect';
-import Section from '../../components/Section';
+import TypeEffect from 'shield-react/TypeEffect';
+import Section from 'shield-react/Section';
+import Stars from 'shield-react/Stars';
 
 const Container = styled.section`
   display: flex;
@@ -38,7 +39,7 @@ function Home() {
         </Container>
       </Section>
       <Section>
-        Favorite Food
+        <Stars />
       </Section>
     </>
   );

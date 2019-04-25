@@ -12,13 +12,13 @@ const typing = keyframes`
 
 const blinkCaret = keyframes`
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: #007AB3 }
 `;
 
 const TextStyle = styled.h1`
   font-size: ${props => props.theme.sizes.fonts.title};
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid #007AB3;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 40px;
