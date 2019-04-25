@@ -60,10 +60,6 @@ const NavStyle = styled.nav`
   transition:all 0.5s;
   position: fixed;
   z-index: 1;
-
-  &.fixed-nav {
-    position: fixed;
-  }
 `;
 
 const links = [
@@ -78,7 +74,6 @@ const links = [
 ];
 
 function Nav(){
-  const offsetTop = null;
   const refNav = useRef(null);
   const refLogo = useRef(null);
   useEffect(() => {
@@ -89,12 +84,10 @@ function Nav(){
   }, []);
 
   const fixHeader = () => {
-    if (window.scrollY > offsetTop) {
-      document.body.style.paddingTop = `${refNav.current.offsetHeight}px`;
+    if (window.scrollY > 100) {
       refNav.current.classList.add('fixed-nav');
       refLogo.current.classList.add('fixed-nav');
     } else {
-      document.body.style.paddingTop = 0;
       refNav.current.classList.remove('fixed-nav');
       refLogo.current.classList.remove('fixed-nav');
     }
