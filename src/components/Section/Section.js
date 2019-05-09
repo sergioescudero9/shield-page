@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 const SectionStyle = styled.section`
   min-height: 100vh;
+  padding: 40px 180px;
 `;
 
-function Section({ children }) {
+function Section({ children, ...rest }) {
   return (
-    <SectionStyle>
+    <SectionStyle {...rest}>
       {children}
     </SectionStyle>
   );

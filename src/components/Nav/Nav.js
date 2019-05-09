@@ -79,7 +79,7 @@ function Nav(){
   useEffect(() => {
     window.addEventListener('scroll', fixHeader);
     return () => {
-      window.removeEventListener('scroll');
+      window.removeEventListener('scroll', fixHeader);
     };
   }, []);
 

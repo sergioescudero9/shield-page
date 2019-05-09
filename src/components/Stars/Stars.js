@@ -2,27 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import Star from './Star';
 
-const Style = styled.h1`
-  content: '\u2606';
-  ::before{
-    content: '\u2605';
-    background: red;
-    color: black;
+const ContainerStyle = styled.div`
+  :hover{
   }
-  ::after{
-    content: '\u2606';
-    background: red;
-    color: black;
-  }
-  
 `;
 
-function Stars({ totalOfStart, numberOfStarFilled }) {
+function Stars({ totalOfStart = 5, numberOfStarFilled = 0}) {
+  const array = [];
+  for (let index = 0; index < totalOfStart; index++) {
+    array.push((index < numberOfStarFilled ? <Star isFilled /> : <Star />))
+  }
   return (
-    <h1>
-      <Star isFilled={true} />
-      <Star />
-    </h1>
+    <ContainerStyle>
+      {array}
+    </ContainerStyle>
   );
 }
 export default Stars;
